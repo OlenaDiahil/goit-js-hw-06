@@ -9,11 +9,8 @@ const ingredients = [
 
 const listEl = document.querySelector("#ingredients");
 
-ingredients.forEach((el) => {
-  const itemsEl = document.createElement("li");
-  itemsEl.classList.add("item");
-  itemsEl.textContent = el;
-  listEl.append(itemsEl);
-});
+const liEl = ingredients.map((ingredient) => '<li class="item">' + ingredient + '</li>');
+
+listEl.insertAdjacentHTML('beforeend', liEl.join(''));
 
 console.log(listEl);
