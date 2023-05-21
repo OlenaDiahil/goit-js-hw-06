@@ -4,10 +4,10 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-const controls = document.getElementById('#controls');
+const controls = document.getElementById('controls');
 const createButton = controls.querySelector('[data-create]');
 const destroyButton = controls.querySelector('[data-destroy]');
-const boxesContainer = document.getElementById('#boxes');
+const boxesContainer = document.getElementById('boxes');
 
 createButton.addEventListener('click', function() {
   const amount = Number(document.querySelector('#controls input').value);
